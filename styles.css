@@ -23,7 +23,7 @@ body {
 .timer {
   background: transparent;
   border: 1px solid lightgray;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   padding: 10px;
   width: 100%; }
   .timer.time-low {
@@ -37,6 +37,15 @@ body {
       font-size: 2.25em; }
     .timer .time small {
       font-size: .9em; }
+
+.access-code {
+  background: #eee;
+  border: 1px solid lightgray;
+  font-size: 4em;
+  letter-spacing: .5em;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%; }
 
 .button-container {
   padding: 0 25px; }
@@ -59,5 +68,11 @@ body {
           color: #999;
           font-size: .8em;
           float: right; }
+        .button-container .row .button button.enter {
+          background: #00D077;
+          color: #FFF; }
+        .button-container .row .button button.clear {
+          background: #EA215A;
+          color: #FFF; }
 
 /*# sourceMappingURL=styles.css.map */

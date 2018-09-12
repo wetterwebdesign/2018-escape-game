@@ -27,7 +27,7 @@ body {
 .timer {
   background:transparent;
   border:1px solid lightgray;
-  margin-bottom:20px;
+  margin-bottom:40px;
   padding:10px;
   width:100%;
 
@@ -49,6 +49,16 @@ body {
       font-size:.9em;
     }
   }
+}
+
+.access-code {
+  background:#eee;
+  border:1px solid lightgray;
+  font-size:4em;
+  letter-spacing: .5em;
+  margin-bottom:20px;
+  padding:10px;
+  width:100%;
 }
 
 .button-container {
@@ -76,6 +86,16 @@ body {
           color:#999;
           font-size:.8em;
           float:right;
+        }
+
+        &.enter {
+          background:#00D077;
+          color:#FFF;
+        }
+
+        &.clear {
+          background:#EA215A;
+          color:#FFF;
         }
       }
     }

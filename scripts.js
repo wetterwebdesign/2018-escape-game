@@ -1,3 +1,5 @@
+// COUNT DOWN TIMER
+
 function startCountDown() {
   var countDownFrom = [40, 0];
   document.querySelector("#mins").textContent = countDownFrom[0];
@@ -25,7 +27,6 @@ function startCountDown() {
         countDownFrom[1] += 59;
         document.querySelector("#secs").textContent = countDownFrom[1];
     } else if (countDownFrom[0] === 0 && countDownFrom[1] === 1) {
-      console.log("fired");
       countDownFrom[1] = "0";
     } else if (countDownFrom[1] !== "0") {
       countDownFrom[1] -= 1;
@@ -42,3 +43,28 @@ function startCountDown() {
 }
 
 startCountDown();
+
+// ACCESS CODE
+var entryNumber = 0;
+
+// display access code
+var accessCode = ["-", "-", "-", "-"];
+
+// pressed button
+var numButtons = document.querySelector(".button-container");
+numButtons.addEventListener("click", pressedButton);
+
+function pressedButton(event) {
+  if (event.target !== event.currentTarget && entryNumber < accessCode.length && event.target.value !== undefined && event.target !== document.querySelector(".clear")) {
+    accessCode[entryNumber] = event.target.value;
+    document.querySelector(".access-code .center").textContent = accessCode[0] + " " + accessCode[1] + " " + accessCode[2] + " " + accessCode[3];
+    entryNumber += 1;
+  }
+}
+
+// pressed clear button
+document.querySelector(".clear").addEventListener("click", function() {
+  accessCode = ["-", "-", "-", "-"];
+  entryNumber = 0;
+  document.querySelector(".access-code .center").textContent = accessCode[0] + " " + accessCode[1] + " " + accessCode[2] + " " + accessCode[3];
+});
