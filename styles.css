@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
+  font-size: 100%;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: lightblue;
+  font-size: 1em; }
+
+.center {
+  display: table;
+  margin: auto;
+  width: auto; }
+
+.max-container {
+  background: #FFF;
+  margin: 30px auto;
+  max-width: 800px;
+  padding: 20px; }
+
+.timer {
+  background: transparent;
+  border: 1px solid lightgray;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%; }
+  .timer.time-low {
+    background: red;
+    color: #FFF; }
+  .timer .time {
+    display: inline-block;
+    text-align: center;
+    width: 100px; }
+    .timer .time h2 {
+      font-size: 2.25em; }
+    .timer .time small {
+      font-size: .9em; }
+
+.button-container {
+  padding: 0 25px; }
+  .button-container .row {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 -20px; }
+    .button-container .row .button {
+      padding: 10px;
+      width: 33.333%; }
+      .button-container .row .button button {
+        background: transparent;
+        font-size: 1.25em;
+        display: block;
+        padding: 30px 15px;
+        position: relative;
+        text-align: left;
+        width: 100%; }
+        .button-container .row .button button small {
+          color: #999;
+          font-size: .8em;
+          float: right; }
+
+/*# sourceMappingURL=styles.css.map */
