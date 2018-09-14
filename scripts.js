@@ -1,7 +1,7 @@
 // COUNT DOWN TIMER
 
 function startCountDown() {
-  var countDownFrom = [40, 0];
+  var countDownFrom = [2, 0];
   document.querySelector("#mins").textContent = countDownFrom[0];
 
   // Decrease time
@@ -50,6 +50,9 @@ var entryNumber = 0;
 // display access code
 var accessCode = ["-", "-", "-", "-"];
 
+// Correct access code
+var correctAccess = ["9", "4", "2", "1"];
+
 // pressed button
 var numButtons = document.querySelector(".button-container");
 numButtons.addEventListener("click", pressedButton);
@@ -67,4 +70,17 @@ document.querySelector(".clear").addEventListener("click", function() {
   accessCode = ["-", "-", "-", "-"];
   entryNumber = 0;
   document.querySelector(".access-code .center").textContent = accessCode[0] + " " + accessCode[1] + " " + accessCode[2] + " " + accessCode[3];
+});
+
+// pressed enter button
+document.querySelector(".enter").addEventListener("click", function() {
+
+  if (accessCode[0] == correctAccess[0] 
+      && accessCode[1] == correctAccess[1] 
+      && accessCode[2] == correctAccess[2] 
+      && accessCode[3] == correctAccess[3]) {
+    console.log("winner");
+  } else {
+    console.log("wrong");
+  }
 });
